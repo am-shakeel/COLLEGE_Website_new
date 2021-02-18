@@ -1328,7 +1328,7 @@ hr {
 
 .col_white_amrc { color:black;}
 footer { width:100%; 
-background-color:white; min-height:200px; padding:10px 0px 25px 0px ;}
+background-color:rgb(235, 235, 235); min-height:200px; padding:10px 0px 25px 0px ;}
 .pt2 { padding-top:10px ; margin-bottom:10px ;}
 footer p { font-size:13px; color:black; padding-bottom:0px; margin-bottom:8px;}
 .mb10 { padding-bottom:15px ;}
@@ -1527,3 +1527,66 @@ div.logo-name{
  img #courseCenter{
    text-align: center;
  }
+
+
+
+ /* VC */
+
+/* Container holding the image and the text */
+.container-vc {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ 
+
+
+ /* VC end */
+
+
+/* Department */
+
+ 
+
+
+
+/* Department end */
