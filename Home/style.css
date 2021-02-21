@@ -1601,7 +1601,18 @@ div.logo-name{
 
 
 
-  /* Gallery */
+  /* Zoom Image */
+  .zoomimage {
+     /* background-color: green; */
+    transition: transform .2s;
+     margin: 0 auto;
 
+  }
+  
+  .zoomimage:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.01); 
+  }
  
-  /* Gallery End */
+  /* Zoom Image End */
