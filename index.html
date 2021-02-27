@@ -239,7 +239,7 @@
   society Jawaharlal Nehru Architecture and Fine Arts University was established by Act of Andhra Pradesh State Legislature 
   No. 31 of 2008. India is very rich in its culture and heritage and has a great mythological background. Its culture and 
   philosophy are highly regarded and valued by the rest of the world. Art and Architecture play an important role the cultural 
-  context. JNAFA University is the first of its kind in the entire country and was established in Andhra Pradesh/Telangana with
+  context. JNAFA University is the first of its kind in t           he entire country and was established in Andhra Pradesh/Telangana with
    headquarters at Mahavir Marg, Masab Tank, Hyderabad. It is highly specialized… <a style="color: #d84a38;" 
    href="#">View More</a></p>
 </div>
@@ -482,6 +482,346 @@
 
 </div>
 <!-- Departments End-->
+
+<p>
+  
+  #ADDING FILES AND LABELLING AXES
+
+
+
+  x<-seq(-pi,pi,0.1)
+  
+  plot(x,sin(x),
+  
+       main="THE SINE FUNCTION",
+  
+       ylab="sin(x)")
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  y<-4*(x^3)-3*(x)-2
+  
+  plot(x,y,
+  
+       main="EXPRESSION",
+  
+       ylab="y")
+  
+  
+  
+  
+  
+  #CHANGING COLOR AND PLOT TYPE
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  plot(x,sin(x),
+  
+            main="THE SINE FUNCTION",
+  
+            ylab="sin(x)",
+  
+            type="p",
+  
+            col="blue")
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  plot(x,sin(x),
+  
+       main="THE SINE FUNCTION",
+  
+       ylab="sin(x)",
+  
+       type="l",
+  
+       col="blue")
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  plot(x,sin(x),
+  
+       main="THE SINE FUNCTION",
+  
+       ylab="sin(x)",
+  
+       type="b",
+  
+       col="blue")
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  plot(x,sin(x),
+  
+       main="THE SINE FUNCTION",
+  
+       ylab="sin(x)",
+  
+       type="c",
+  
+       col="blue")
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  plot(x,sin(x),
+  
+       main="THE SINE FUNCTION",
+  
+       ylab="sin(x)",
+  
+       type="o",
+  
+       col="blue")
+  
+  
+  
+  x<-seq(0,1,0.1)
+  
+  plot(x,sin(x),
+  
+       main="THE SINE FUNCTION",
+  
+       ylab="sin(x)",
+  
+       type="s",
+  
+       col="blue")
+  
+  
+  
+  
+  
+  
+  
+  plot(x,sin(x),
+  
+       main="OVERLAYING GRAPHS",
+  
+       ylab="",
+  
+       type="l",
+  
+       col="blue")
+  
+  lines(x,cos(x),col="red")
+  
+  legend("topleft",
+  
+         c("sin(x)","cos(x)"),
+  
+         fill=c("blue","red")
+  
+  )
+  
+  
+  
+  library(lattice)
+  states<-c('Uttar Pradesh','Goa','Gujarat','Haryana','Himachal Pradesh','Jammu & Kashmir','Jharkhand','Karnataka','Kerala','Ladakh','Madhya Pradesh','Maharashtra','Manipur','West Bengal','Mizoram','Nagaland','Odisha','Puducherry','Punjab','Rajasthan','TamilNadu','Telengana','Tripura')
+  malepercentage<-c(60,40,57,60,61,53,60,43,53,55,67,86,48,53,37,53,60,67,53,67,50,53,60)
+  cured<-c(438521,39433,150513,147566,17782,83485,93368,719558,302017,5216,154222,1470660,13057,310086,2212,6792,266105,29990,123047,169962,671489,213466,28153)
+  deaths<-c(6904,582,3690,1737,293,1444,872,10947,1352,71,2890,43348,144,6546,0,33,1259,588,4125,1853,10956,1315,344)
+  total<-c(472077,42532,167919,159457,20586,92225,99906,805947,397217,5978,167969,1648665,1742,353822,2527,8663,282695,34336,131391,188048,711713,232671,30293)
+  covid<-data.frame(states,malepercentage,cured,deaths,total)
+  covid
+  r<-lm(covid$malepercentage~covid$total)
+  summary(r)
+  scatter.smooth(x=covid$malepercentage,y=covid$total,main="malepercentage-total")
+  
+  ypred<-predict.lm(r,covid)
+  print(ypred)
+  ycomp<-data.frame(covid,ypred)
+  print(ycomp)
+  
+  v<-glm(total~malepercentage,data = covid)
+  summary(v)
+                
+  
+  
+  
+  Sno<-c(1,2,3,4,5)
+  Ozone<-c(41,36,12,18,NA)
+  Wind<-c(190,118,149,313,NA)
+  Temp<-c(67,72,74,62,56)
+  Month<-c(5,5,5,5,5)
+  Date<-c(1,2,3,5,6)
+  D<-data.frame(Sno,Ozone,Wind,Temp,Month,Date)
+  D
+  D[1,'Wind']<-200
+  D
+  a<-c(23,24,25,26)
+  D1<-rbind(D,a)
+  D1
+  b<-c('a','b','c','d','e','f')
+  D2<-cbind(D1,b)
+  D2
+  
+  
+  
+  
+  Pow<-function(x,y)
+  {
+    l<-x^y
+    return(l)
+  }
+  K<-Pow(2,3)
+  K
+  
+  
+  
+  
+  A<-matrix(1:9,nrow=3,ncol=3)
+  A
+  A[3,3]<-10
+  A
+  A[A<5]<-1
+  A
+  B<-t(A)
+  B
+  B1<-c(12,13,34)
+  C<-rbind(A,B1)
+  C
+  P1<-c(15,14,16,85)
+  C1<-cbind(C,P1)
+  C1
+  C1<-C1[1:3,]
+  C1
+  dim(C1)<-c(1,12);
+  C1
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  library(lattice)
+  attach(mtcars)
+  mtcars
+  #Create factors with value labels
+  gear.m<-factor(gear,levels=c(3,4,5),
+                 labels=c("3gears","4gears","5gears"))
+  cyl.m<-factor(cyl,levels=c(4,6,8),
+                labels=c("4cyl","6cyl","8cyl"))
+  
+  #Kernel density plot
+  densityplot(~mpg,
+              main="Density Plot",
+              xlab="Miles per gallon")
+  
+  #Kernel density plot by factor level
+  densityplot(~mpg|cyl.m,
+              main="Density Plot by Number of Cylinders",
+              xlab="Miles per gallon")
+  
+  #Kernel density plot by factor level(alternative)
+  densityplot(~mpg|cyl.m,
+              main="Density Plot by Number of Cylinders",
+              xlab="Miles per gallon",
+              layout=c(1,3))
+  
+  #Boxplots
+  bwplot(cyl.m~mpg|gear.m,
+         ylab="Cylinders",xlab="Miles per Gallon",
+         main="Mileage by Cylinders and Gears",
+         layout=c(1,3))
+  
+  #Scatter plots
+  xyplot(mpg~wt|cyl.m*gear.m,
+         main="Scatterplots by Cylindrs and Gears",
+         ylab="Miles per gallon",xlab="Car weight")
+  
+  #3D scatter plot
+  cloud(mpg~wt*qsec|cyl.m,
+        main="3D Scatter plot by cylinders")
+  
+  #Dotplot
+  dotplot(cyl.m~mpg|gear.m,
+          main="Dotplot Plot by number of gears and cylinders",
+          xlab="miles per gallon")
+  
+  #Scatter plot matrix
+  splom(mtcars[c(1,3,4,5,6)],
+        main="MTCARS DATA")
+  
+  
+  
+  
+  
+  #R 3D PLOT
+  
+  cone<-function(x,y){
+    sqrt(x^2+y^2)
+  }
+  
+  x<-y<-seq(-1,1,length=20)
+  z<-outer(x,y,cone)
+  
+  persp(x,y,z)
+  
+  
+  
+  
+  
+  #R MULTIPLE PLOTS
+  
+  par(mfrow=c(1,2))
+  #x<-seq(-pi,pi,0.1)
+  x<-seq(0,1,0.1)
+  plot(x,sin(x),
+       main="THE SINE FUNCTION",
+       ylab="sin(x)")
+  
+  
+  x<-seq(0,1,0.1)
+  y<-4*(x^3)-3*(x)-2
+  plot(x,y,
+       main="EXPRESSION",
+       ylab="y")
+  
+  
+  
+  
+  
+  #R PLOT FUNCTION
+  #transdental
+  x<-seq(-pi,pi,0.1)
+  plot(x,sin(x))
+  #unrelations
+  
+  #algebraic
+  x<-seq(0,1,0.1)
+  y<-x^2
+  plot(x,y)
+  #monotonically increasing
+  
+  #algebraic and transdental
+  x<seq(0,1,0.1)
+  y<-cos(x)-2*x+x^3
+  plot(x,y)
+  #decreasing
+  
+  #algebraic
+  x<-seq(0,1,0.1)
+  y<-4*(x^3)-3*(x)-2
+  plot(x,y)
+  #parabola
+
+
+</p>
 
 
 
